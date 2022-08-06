@@ -923,6 +923,12 @@ img {
   opacity: 1;
 }
 
+.modal-form-check:required {
+  position: absolute;
+  bottom: 125px;
+  left: 60px;
+}
+
 .modal-form-check-link {
   color: var(--accent-text-color);
   border-bottom: 1px solid var(--accent-text-color);
