@@ -547,7 +547,7 @@ img {
   fill: currentColor;
 }
 
-.footer-form {
+.form-container {
   margin-left: auto;
 }
 
@@ -559,7 +559,7 @@ img {
   margin-bottom: 20px;
 }
 
-.form-container {
+.footer-form {
   display: flex;
 }
 
@@ -793,6 +793,7 @@ img {
   color: #000000;
   background-color: #fff;
   cursor: pointer;
+  transition: color var(--transition-duration) var(--transition-timing-function);
 }
 
 .button-modal:hover,
@@ -820,7 +821,7 @@ img {
 }
 
 .modal-form-field {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .modal-form-input-desc {
@@ -845,7 +846,8 @@ img {
   transition: border-color var(--transition-duration) var(--transition-timing-function);
 }
 
-.modal-form-input:focus {
+.modal-form-input:focus-within,
+.modal-form-input:hover {
   outline: none;
   border-color: var(--accent-text-color);
 }
@@ -858,8 +860,13 @@ img {
   transition: fill var(--transition-duration) var(--transition-timing-function);
 }
 
-.modal-form-input:focus + .modal-form-input-icon {
+.modal-form-input:focus-within + .modal-form-input-icon,
+.modal-form-input:hover + .modal-form-input-icon {
   fill: var(--accent-text-color);
+}
+
+.modal-form-field-textarea {
+  margin-bottom: 20px;
 }
 
 .modal-form-coments {
@@ -872,7 +879,8 @@ img {
   transition: border-color var(--transition-duration) var(--transition-timing-function);
 }
 
-.modal-form-coments:focus {
+.modal-form-coments:focus-within,
+.modal-form-coments:hover {
   outline: none;
   border-color: var(--accent-text-color);
 }
@@ -918,6 +926,14 @@ img {
 .modal-form-check-link {
   color: var(--accent-text-color);
   border-bottom: 1px solid var(--accent-text-color);
+}
+
+.modal-form-button {
+  font-size: 16px;
+  line-height: 1.88;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  padding: 10px 55px;
 }
 
 .modal-form-button:hover,
